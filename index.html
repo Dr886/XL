@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời xin lỗi</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #FFD1DC, #FF9CEE);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #FFF5F7;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            border: 3px solid #FFB6C1;
+        }
+
+        h1 {
+            color: #FF69B4;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #FF1493;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #FF6EB4;
+            color: white;
+            padding: 12px 25px;
+            margin-top: 20px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #FF1493;
+            transform: scale(1.1);
+        }
+
+        audio {
+            display: none;
+        }
+
+        .heart {
+            font-size: 50px;
+            color: #FF69B4;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Xin lỗi em ❤️</h1>
+        <p class="heart">"Anh xin lỗi nếu đã làm em buồn. Anh xin lỗi vì đã không thể ở bên cạnh em lúc em cần. Và anh hứa sẽ không báo giờ để em khóc nữa"</p>
+        <a href="#" onclick="playMusic()">Hit the buttom</a>
+        <audio id="backgroundMusic" src="EmKhongDuocPhepBuonRau-kis-7793984.mp3"></audio>
+    </div>
+
+    <script>
+        function playMusic() {
+            const music = document.getElementById('backgroundMusic');
+            music.play();
+        }
+    </script>
+</body>
+</html>
